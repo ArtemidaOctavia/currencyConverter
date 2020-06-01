@@ -1,0 +1,9 @@
+.navlink {
+    display: inline-block;
+    color: blue;
+    padding: 5px;
+}
+
+.navlink:active {
+    color: red;
+}

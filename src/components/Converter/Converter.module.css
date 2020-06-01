@@ -1,0 +1,14 @@
+.button {
+    display: inline-block;
+    color: blue;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    text-decoration: underline;
+}
+
+.button:active {
+    color: red;
+}
