@@ -1,9 +1,17 @@
 .navlink {
     display: inline-block;
-    color: blue;
+    color: black;
     padding: 5px;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 10px;
+    text-decoration: none;
 }
 
 .navlink:active {
     color: red;
+}
+
+.navlink:hover {
+    background-color: darkgray;
 }

@@ -1,14 +1,45 @@
 .button {
     display: inline-block;
-    color: blue;
-    margin-right: 5px;
+    color: black;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
     cursor: pointer;
+    background-color: lightgray;
 }
 
 .button:hover {
-    text-decoration: underline;
+    background-color: darkgray;
 }
 
 .button:active {
+    color: red;
+}
+
+.input {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.currencyHolder {
+    margin: 5px;
+}
+
+.currency {
+    display: inline-block;
+    color: black;
+    margin-left: 5px;
+    cursor: pointer;
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.currency:hover {
+    background-color: darkgray;
+}
+
+.currency:active {
     color: red;
 }

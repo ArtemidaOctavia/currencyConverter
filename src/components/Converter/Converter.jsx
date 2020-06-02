@@ -4,7 +4,7 @@ import styles from './Converter.module.css'
 export const Converter = (props) => {
   return <div>
 
-    <div><input onChange={(event) => {
+    <div><input className={styles.input} onChange={(event) => {
       props.setSum(event.target.value);
       props.setConverted((event.target.value / props.courses[0][`${props.currency}_out`]).toFixed(2))
     }} placeholder={'BYR'}/> <span>to {props.currency ? props.currency : '...'} </span><span>{
@@ -12,22 +12,23 @@ export const Converter = (props) => {
       props.converted ? `= ${props.converted}` : ''
 
     }</span></div>
-
+    <div className={styles.currencyHolder}>
     {props.courses ?
       Object.entries(props.courses[0]).map((item, index) => {
         if (index <= 16) {
           let currency = index % 2 === 0 ? item[0].substring(0, 3) : '';
           if (index % 2 === 0) {
-            return <div onClick={() => {
+            return <div className={styles.currency} onClick={() => {
               props.setCurrency(currency)
-            }} className={styles.button} key={index}>{currency}</div>
+            }} key={index}>{currency}</div>
           }
         }
       }) : ''
     }
+    </div>
     <div>
       <div>
-        <button onClick={() =>
+        <button className={styles.button} onClick={() =>
           props.setConverted((props.sum / props.courses[0][`${props.currency}_out`]).toFixed(2))
         }>convert
         </button>
