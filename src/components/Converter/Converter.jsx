@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Converter.module.css'
+import styles from './Converter.module.scss'
 
 export const Converter = (props) => {
   return <div>
