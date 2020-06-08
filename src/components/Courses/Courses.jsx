@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Courses.module.css'
+import styles from './Courses.module.scss'
 
 export const Courses = (props) => {
   return (
