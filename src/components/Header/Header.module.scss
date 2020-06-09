@@ -1,17 +1,24 @@
 .navlink {
     display: inline-block;
     color: black;
-    padding: 5px;
     margin: 5px;
-    background-color: lightgray;
-    border-radius: 10px;
+    cursor: pointer;
+    background-color: lightgrey;
+    border-radius: 7px;
+    padding: 5px;
+    box-shadow:
+            inset 0 0 3px black,
+            0 0 2px black;
     text-decoration: none;
 }
 
-.navlink:active {
-    color: red;
+.navlink:hover {
+    opacity: 80%;
 }
 
-.navlink:hover {
-    background-color: darkgray;
+.navlink:active {
+    outline: 0;
+    box-shadow:
+            inset 0 0 5px black,
+            0 0 0 black;
 }

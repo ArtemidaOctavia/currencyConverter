@@ -1,45 +1,33 @@
-.button {
-    display: inline-block;
-    color: black;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: lightgray;
-}
-
-.button:hover {
-    background-color: darkgray;
-}
-
-.button:active {
-    color: red;
-}
-
 .input {
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .currencyHolder {
-    margin: 5px;
+  margin: 5px;
 }
 
 .currency {
-    display: inline-block;
-    color: black;
-    margin-left: 5px;
-    cursor: pointer;
-    background-color: lightgrey;
-    border-radius: 5px;
-    padding: 3px;
+  display: inline-block;
+  color: black;
+  margin-right: 5px;
+  cursor: pointer;
+  background-color: lightgrey;
+  border-radius: 7px;
+  padding: 3px;
+  box-shadow:
+    inset 0 0 3px black,
+    0 0 2px black;
 }
 
 .currency:hover {
-    background-color: darkgray;
+  opacity: 80%;
 }
 
 .currency:active {
-    color: red;
+  outline: 0;
+  box-shadow:
+          inset 0 0 5px black,
+          0 0 0 black;
 }

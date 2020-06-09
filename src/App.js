@@ -8,13 +8,13 @@ import store from "./redux/store";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Provider store={store}>
-        <HeaderContainer />
-        <Route  path={'/converter'} render={() => <ConverterContainer />}/>
-        <Route  path={'/courses'} render={() => <CoursesContainer />}/>
-      </Provider>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Provider store={store}>
+          <HeaderContainer/>
+          <Route path={'/converter'} render={() => <ConverterContainer/>}/>
+          <Route path={'/courses'} render={() => <CoursesContainer/>}/>
+        </Provider>
+      </BrowserRouter>
   );
 }
 
