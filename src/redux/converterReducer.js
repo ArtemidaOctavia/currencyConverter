@@ -1,5 +1,5 @@
 let initialState = {
-  currency: null,
+  currency: 'USD',
   converted: null,
   sum: null
 
@@ -13,10 +13,24 @@ export const converterReducer = (state = initialState, action) => {
         currency: action.currency
       };
     case 'SET-CONVERTED':
-      return {
-        ...state,
-        converted: action.value
-      };
+      if (action.value === 'NaN') {
+        return {
+          ...state,
+          converted: 'Number required'
+        }
+
+      } else {
+        if (state.currency === 'RUB') {
+          return {
+            ...state,
+            converted: action.value * 100
+          }
+        }
+        return {
+          ...state,
+          converted: action.value
+        };
+      }
     case 'SET-SUM':
       return {
         ...state,
