@@ -23,7 +23,7 @@ export const converterReducer = (state = initialState, action) => {
         if (state.currency === 'RUB') {
           return {
             ...state,
-            converted: action.value * 100
+            converted: (action.value * 100).toFixed(2)
           }
         }
         return {
