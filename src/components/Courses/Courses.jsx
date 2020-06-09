@@ -8,7 +8,7 @@ export const Courses = (props) => {
         <div>
           {
             Object.entries(props.courses[0]).map((item, index, arr) => {
-              if (index <= 16) {
+              if (index <= 16 && (item[1] !== '0.0000')) {
                 let currency = index % 2 === 0 ? item[0].substring(0, 3) : '';
                 if (index % 2 === 0) {
                   return <div className={styles.value} key={index}><span>{currency + ': ' + item[1]}/{arr[index + 1][1]} </span></div>
