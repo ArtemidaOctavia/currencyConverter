@@ -10,6 +10,9 @@ export const Converter = (props) => {
 
   return <Container className={styles.converterHolder}>
     <InputGroup className="mb-3">
+      <FormControl aria-describedby="basic-addon1" onChange={(event) => {
+        props.setSum(event.target.value);
+      }} placeholder={'BYR'}/>
       <DropdownButton
         as={InputGroup.Prepend}
         variant="outline-secondary"
@@ -29,10 +32,7 @@ export const Converter = (props) => {
           }) : ''
         }
       </DropdownButton>
-      <FormControl aria-describedby="basic-addon1" onChange={(event) => {
-        props.setSum(event.target.value);
-      }} placeholder={'BYR'}/>
+      <FormControl value={props.converted && props.currency ? `${props.converted}` : ''}/>
     </InputGroup>
-    <span>to {props.currency} </span><span>{props.converted && props.currency ? `= ${props.converted}` : ''}</span>
   </Container>
 };

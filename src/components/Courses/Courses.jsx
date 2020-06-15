@@ -10,8 +10,8 @@ export const Courses = (props) => {
           <thead>
           <tr>
             <th>Currency</th>
-            <th>Sell</th>
             <th>Buy</th>
+            <th>Sell</th>
           </tr>
           </thead>
           <tbody>
