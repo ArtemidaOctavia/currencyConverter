@@ -10,7 +10,7 @@ export const Converter = (props) => {
 
   return <Container className={styles.converterHolder}>
     <InputGroup className="mb-3">
-      <FormControl aria-describedby="basic-addon1" onChange={(event) => {
+      <FormControl type="number" className={styles.input} aria-describedby="basic-addon1" onChange={(event) => {
         props.setSum(event.target.value);
       }} placeholder={'BYR'}/>
       <DropdownButton
