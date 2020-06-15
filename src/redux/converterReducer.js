@@ -13,37 +13,28 @@ export const converterReducer = (state = initialState, action) => {
         currency: action.currency
       };
     case 'SET-CONVERTED':
-      if (action.value === 'NaN') {
-        return {
-          ...state,
-          converted: 'Number required'
-        }
-
-      } else {
-        switch (state.currency) {
-          case 'RUB':
-            return {
-              ...state,
-              converted: (action.value * 100).toFixed(2)
-            };
-            case 'UAH':
-            return {
-              ...state,
-              converted: (action.value * 100).toFixed(2)
-            };
-          case 'SEK': {
-            return {
-              ...state,
-              converted: (action.value * 10).toFixed(2)
-            }
+      switch (state.currency) {
+        case 'RUB':
+          return {
+            ...state,
+            converted: (action.value * 100).toFixed(2)
+          };
+        case 'UAH':
+          return {
+            ...state,
+            converted: (action.value * 100).toFixed(2)
+          };
+        case 'SEK': {
+          return {
+            ...state,
+            converted: (action.value * 10).toFixed(2)
           }
-          default:
-            return {
-              ...state,
-              converted: action.value
-            };
         }
-
+        default:
+          return {
+            ...state,
+            converted: action.value
+          };
       }
     case 'SET-SUM':
       return {
