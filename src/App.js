@@ -10,7 +10,7 @@ function App() {
   return (
       <BrowserRouter>
         <Provider store={store}>
-          <HeaderContainer/>
+            <HeaderContainer/>
           <Route path={'/converter'} render={() => <ConverterContainer/>}/>
           <Route path={'/courses'} render={() => <CoursesContainer/>}/>
         </Provider>
