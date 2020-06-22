@@ -10,14 +10,13 @@ export const Converter = (props) => {
 
   return <Container className={styles.converterHolder}>
     <InputGroup className="mb-3">
-      <FormControl type="number" className={styles.input} aria-describedby="basic-addon1" onChange={(event) => {
+      <FormControl value={props.sum} type="number" className={styles.input} aria-describedby="basic-addon1" onChange={(event) => {
         props.setSum(event.target.value);
       }} placeholder={'BYR'}/>
       <DropdownButton
         as={InputGroup.Prepend}
         variant="outline-secondary"
         title={props.currency}
-        id="input-group-dropdown-1"
       >
         {props.courses ?
           Object.entries(props.courses[0]).map((item, index) => {
@@ -32,7 +31,7 @@ export const Converter = (props) => {
           }) : ''
         }
       </DropdownButton>
-      <FormControl value={props.converted && props.currency ? `${props.converted}` : ''}/>
+      <FormControl readOnly value={props.converted && props.currency ? `${props.converted}` : ''}/>
     </InputGroup>
   </Container>
 };
