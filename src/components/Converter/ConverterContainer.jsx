@@ -9,7 +9,7 @@ const mapStateToProps = (state) => {
     courses: state.courses.courses,
     currency: state.converter.currency,
     converted: state.converter.converted,
-    sum: state.converter.sum
+    sum: state.converter.sum,
   }
 };
 
@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch) => {
     setCurrency: (currency) => dispatch(setCurrency(currency)),
     setConverted: (converted) => dispatch(setConverted(converted)),
     setCourses: (city) => dispatch(getCoursesThunk(city)),
-    setSum: (sum) => dispatch(setSum(sum))
+    setSum: (sum) => dispatch(setSum(sum)),
   }
 };
 

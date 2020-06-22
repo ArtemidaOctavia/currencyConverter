@@ -1,8 +1,7 @@
 let initialState = {
   currency: 'USD',
   converted: null,
-  sum: null
-
+  sum: null,
 };
 
 export const converterReducer = (state = initialState, action) => {
