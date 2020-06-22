@@ -1,7 +1,7 @@
 import React from 'react';
 import {Converter} from "./Converter";
 import {connect} from 'react-redux';
-import {setConverted, setCurrency, setCurrent, setSum} from "../../redux/converterReducer";
+import {setConverted, setCurrency, setSum} from "../../redux/converterReducer";
 import {getCoursesThunk} from "../../redux/coursesReducer";
 
 const mapStateToProps = (state) => {
