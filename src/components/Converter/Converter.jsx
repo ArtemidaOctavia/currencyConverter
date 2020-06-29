@@ -24,7 +24,7 @@ export const Converter = (props) => {
         title={props.currency}>
         {props.courses &&
         Object.entries(props.courses).map((currencyDescription, index) => {
-          return props.renderDropdownElement(currencyDescription, index, props.setCurrency)
+          return props.renderDropdownItem(currencyDescription, index, props.setCurrency)
         })
         }
       </DropdownButton>
