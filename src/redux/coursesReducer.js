@@ -28,7 +28,7 @@ let setCoursesActionCreator = (courses) => {
 export const getCoursesThunk = (city) => {
   return (dispatch) => {
     getInfo(city).then((response) => {
-      dispatch(setCoursesActionCreator(response.data))
+      dispatch(setCoursesActionCreator(response.data[0]))
     });
   }
 };

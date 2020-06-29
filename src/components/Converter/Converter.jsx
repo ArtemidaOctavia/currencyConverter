@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Converter.module.scss'
-import {DropdownButton, FormControl, InputGroup, Dropdown, Container} from "react-bootstrap";
+import {DropdownButton, FormControl, InputGroup, Container} from "react-bootstrap";
 
 export const Converter = (props) => {
 
@@ -21,19 +21,11 @@ export const Converter = (props) => {
       <DropdownButton
         as={InputGroup.Prepend}
         variant="outline-secondary"
-        title={props.currency}
-      >
-        {props.courses ?
-          Object.entries(props.courses[0]).map((item, index) => {
-            if (index <= 16 && (item[1] !== '0.0000')) {
-              let currency = index % 2 === 0 ? item[0].substring(0, 3) : '';
-              if (index % 2 === 0) {
-                return <Dropdown.Item onClick={() => {
-                  props.setCurrency(currency);
-                }} key={index}>{currency}</Dropdown.Item>
-              }
-            }
-          }) : ''
+        title={props.currency}>
+        {props.courses &&
+        Object.entries(props.courses).map((currencyDescription, index) => {
+          return props.renderDropdownElement(currencyDescription, index, props.setCurrency)
+        })
         }
       </DropdownButton>
     </InputGroup>
