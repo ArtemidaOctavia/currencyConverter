@@ -17,7 +17,7 @@ export const Courses = (props) => {
         <tbody>
         {
           Object.entries(props.courses).map((currencyDescription, index, currencies) => {
-            return props.renderTableRows(currencyDescription, index, currencies);
+            return props.renderTableRow(currencyDescription, index, currencies);
           })
         }
         </tbody>
