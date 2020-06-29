@@ -5,7 +5,7 @@ import {DropdownButton, FormControl, InputGroup, Container} from "react-bootstra
 export const Converter = (props) => {
 
   if (props.sum && props.courses) {
-    props.setConverted((props.sum / props.courses[0][`${props.currency}_out`]).toFixed(2));
+    props.setConverted((props.sum / props.courses[`${props.currency}_out`]).toFixed(2));
   }
 
   return <Container className={`${styles.converterHolder}; col-xl-3`}>
